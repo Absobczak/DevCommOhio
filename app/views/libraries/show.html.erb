@@ -1,0 +1,34 @@
+  <div class="container">
+    <div class="well">
+        <h3>
+          <strong>Title:</strong>
+          <%= @library.title %>
+        </h3>
+        <p>
+          <strong>Description:</strong>
+          <%= @library.description %>
+        </p>
+         <p>
+          <strong>Tags:</strong>
+          <%= @library.tags %>
+        </p>
+
+        <%= link_to 'Edit', edit_library_path(@library) %> 
+        <%= link_to 'Back', libraries_path %> 
+    </div>
+    <div class="well">
+        <p>
+          <strong>Link:</strong>
+          <%= @library.link %>
+        </p>
+
+        <p>
+          <strong>File upload:</strong>
+          <%= @library.file_upload %>
+        </p>
+
+    
+    </div>
+  </div>
+</div>
+

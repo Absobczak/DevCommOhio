@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Libraries</h1>
+
+<div class="container">
+  <div class="row text-center">
+    <div id="tag_box" class="col-md-3 well"></div>
+
+  <%= link_to new_library_path do %>
+    <div class="library_source col-md-2" id="newresource">New Resource<br><span class="glyphicon glyphicon-plus"></span>
+    </div>
+  <% end %>  
+
+   <% @libraries.each do |library| %>
+      <div class="library_source col-md-2">
+        <%= link_to library do %>
+            <h2><%= library.title %></h2>
+            <h6><%= library.description %></h6>
+        <% end %>
+            <p>#<%= library.tags %></p>
+            <p><%= link_to 'Show', library %>
+              <%= link_to 'Edit', edit_library_path(library) %>
+              <%= link_to 'Destroy', library, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+
+   <% end %>
+
+  </div>
+</div>
+
+<br>
+
+
+
