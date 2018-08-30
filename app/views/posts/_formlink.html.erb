@@ -1,0 +1,15 @@
+<% @posts.reverse.each do |post| %>
+  <div class="well">
+    <%= link_to post do %>
+      <h1><%= post.title %></h1><br>
+      <p>
+        <%= post.author %><br>
+        <%= time_ago_in_words(post.created_at) if Time.now - post.created_at < 86400 %><br>
+        <%= post.created_at.strftime('%b%e') if Time.now - post.created_at <86400 %>
+      </p>
+    <% end %>
+    <p><%= post.tag %></p>
+  </div>
+<% end %>
+
+<br>

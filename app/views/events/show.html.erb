@@ -1,0 +1,23 @@
+<p>
+  <strong>Title:</strong>
+  <%= @event.event_title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @event.link.html_safe %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @event.tag %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @event.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> 
+<%= link_to 'Back', events_path %>

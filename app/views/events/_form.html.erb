@@ -1,0 +1,28 @@
+<%= form_with(model: event, local: true) do |form| %>
+
+
+
+  <div class="field">
+    <%= form.label :event_title %>
+    <%= form.text_field :event_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag %>
+    <%= form.text_field :tag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_area :date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

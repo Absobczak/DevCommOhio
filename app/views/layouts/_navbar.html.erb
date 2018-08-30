@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-white">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/posts"><%= image_tag "DevComm.png" %></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/libraries">Library</a></li>
+        <li><a href="/events">Events</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-th"></span><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <% if current_user %>
+              <%= current_user.name %>
+              <%= image_tag current_user.image, size: 50 %><br>
+              <%= link_to "Sign out", signout_path, id: "sign_out" %>
+            <% else %>
+            <a href="/auth/github">
+              <%= image_tag "GitHub-Mark-32px.png", :class=> "icon-img", :height=> 20, :width=> 20 %>Github SignIn</a><br>
+            <a href="/auth/linkedin">
+              <%= image_tag "if_linkedin_386655.png", :class=> "icon-img", :height=> 20, :width=> 20 %>Linkedin SignIn
+            </a>
+            <% end %>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

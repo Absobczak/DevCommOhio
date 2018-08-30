@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="well" id="new-post">
+                <%= link_to 'New Post', new_post_path %>
+            </div>
+        </div>
+        <div class="col-md-3"><br>
+            <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Post" %>
+            <%= submit_tag "Search", :name => nil %>
+            <% end %><br>
+            <% if @posts.blank? %>
+              <h4>There are no posts containing the term <%= params[:search] %>.</h4>
+            <% end %>
+        </div>
+    </div>
+</div><br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="well">
+                <h1>Most Recent Library Resources:</h1>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <%= render '/posts/formlink' %>
+        </div>
+        <div class="col-md-3">
+                <iframe  src="https://www.eventbrite.com/calendar-widget?eid=49555874956&showPrivate=1&sig=AGbIMNwSRf7NNygX_0MRQp1uxk5s-nKqaA" height="360" width="235" marginwidth="20" scrolling="yes" allowtransparency="true"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6-offset">
+        <div class="well", style="text-align: center;">
+            <%= link_to 'Return to Top', root_path %>
+        </div>
+    </div>
+</div>
+
+     

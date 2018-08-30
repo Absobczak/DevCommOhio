@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Library</h1>
+
+<div class="container">
+  <div class="row text-center">
+    <div id="tag_box" class="col-md-3 well"></div>
+
+  <%= link_to new_library_path do %>
+    <div class="library_source col-md-2" id="newresource">Create Resource<br><span class="glyphicon glyphicon-plus"></span>
+    </div>
+  <% end %>  
+
+   <% @libraries.each do |library| %>
+      <div class="library_source col-md-2">
+        <%= link_to library do %>
+            <h3><%= library.title %></h3>
+            <h6><%= library.description%></h6>
+        <% end %>
+            <p>#<%= library.tags %></p>
+            
+      </div>
+
+   <% end %>
+
+  </div>
+</div>
+
+<br>
+
+
+
