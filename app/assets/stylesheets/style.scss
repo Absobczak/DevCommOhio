@@ -1,3 +1,14 @@
+h1 {
+	color: white;
+	font-family: helvetica neue;
+	font-size: 3em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px; 
+	text-shadow: 1px 1px 1px #2f2f3a;
+	font-weight: lighter; 
+}
+
 body {
     background: #ccffdd;
 }
@@ -93,3 +104,38 @@ a:hover {
 .library_source:focus .library_source:active {
     text-decoration: none !important; 
 }
+
+.well {
+    background: #9fdf9f;
+
+}
+
+#lib {
+    border: 5px solid black;
+}
+
+#liblink {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    border: .5px double blue;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-variant: small-caps;
+}
+
+hr.someClass {
+  background-color: blue;
+  width: auto;
+  height: 8px;
+  border-top: 1px solid black
+}
+
+#circular {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+

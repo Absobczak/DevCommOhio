@@ -1,4 +1,4 @@
-<%= simple_form_for(@post) do |form| %>
+<%= simple_form_for @post do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -25,12 +25,13 @@
     <%= form.text_field :tag %>
   </div>
 
-  <div class="field">
-    <%= form.label :entry %>
-    <%= form.cktext_area :entry, cols: 40 %>
+  <div class="form-group">
+    <%= form.label :entry %><br>
+    <%= form.cktext_area :entry, :class=> "form-control", :rows => 20, :cols => 120 %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+

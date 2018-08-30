@@ -11,9 +11,6 @@
             <%= text_field_tag :search, params[:search], placeholder: "Search Post" %>
             <%= submit_tag "Search", :name => nil %>
             <% end %><br>
-            <% if @posts.blank? %>
-              <h4>There are no posts containing the term <%= params[:search] %>.</h4>
-            <% end %>
         </div>
     </div>
 </div><br>
@@ -21,11 +18,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-            <div class="well">
-                <h1>Most Recent Library Resources:</h1>
+            <div class="well" id="lib">
+                <h5><strong>Recent Library Resources:</strong></h5>
+                <% @libraries.reverse.each do |lib| %>
+                  <div class="well" id="liblink">
+                    <%= link_to lib do %>
+                      <h3><%= lib.title %></h3>
+                      <p>
+                        <%= lib.description %>
+                      </p>
+                    <% end %>
+                    <%= lib.tags %>
+                   <br>
+                  </div><br>
+                <% end %>
+                <br>
             </div>
         </div>
         <div class="col-md-6">
+            <% if @posts.blank? %>
+              <h1>There are no posts containing the term <%= params[:search] %>.</h1>
+            <% end %>
             <%= render '/posts/formlink' %>
         </div>
         <div class="col-md-3">
@@ -34,12 +47,5 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-6-offset">
-        <div class="well", style="text-align: center;">
-            <%= link_to 'Return to Top', root_path %>
-        </div>
-    </div>
-</div>
 
      

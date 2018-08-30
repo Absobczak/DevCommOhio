@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="image/gif/png" href="DevComm.png">
     <title>DevCommOh</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,13 +9,26 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag Ckeditor.cdn_url %>
   </head>
 
-  <body>
+  <body id="ref">
     <%= render "/layouts/navbar" %>
     <div class="container">
       <%= yield %>
     </div>
   </body>
+
+  <footer>
+    <div class="row">
+      <div class ="well", style="text-align: left;">
+          <div id="footer">
+            <a href="#ref">Return To Top</a>
+            <div class="col-md-6">
+            <span class="glyphicon glyphicon-copyright-mark">DevCommOhio2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>

@@ -17,7 +17,7 @@
 
 <p>
   <strong>Entry:</strong>
-  <%= @post.entry.html_safe %>
+  <%= raw @post.entry %>
 </p>
 <%= render 'comments/form', comment: @comment %>
 

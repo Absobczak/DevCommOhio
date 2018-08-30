@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'relations/create'
   get 'relations/show'
   get 'relations/destroy'
-  mount Ckeditor::Engine => '/ckeditor' if Gem.loaded_specs.has_key? "ckeditor"
+
   resources :libraries
   resources :comments
   resources :posts
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
   get "libraries" => "libraries#index"
   get "tag" => "tags#index"
   get "events" => "events#index"
+  get 'about' => "about#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
