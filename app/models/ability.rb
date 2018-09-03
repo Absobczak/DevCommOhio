@@ -6,6 +6,7 @@ class Ability
       can :manage, All
     elsif user.guest?
       can :manage, Post, Libraries, Comments
+    end
     
     # Define abilities for the passed in user here. For example:
     #
