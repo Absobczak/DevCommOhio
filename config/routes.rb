@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  get 'relations/create'
-  get 'relations/show'
-  get 'relations/destroy'
 
   resources :libraries
   resources :comments
