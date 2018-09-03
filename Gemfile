@@ -20,8 +20,7 @@ gem 'mini_magick'
 gem 'bootstrap-form'
 gem 'simple_form'
 gem 'cancancan', '~> 2.0'
-gem 'pg'
-gem 'fog-aws'
+
 
 
 
@@ -76,7 +75,6 @@ group :development do
 end
 
 group :production do
-  
   gem 'pg'
   gem 'rails_12factor'
 
