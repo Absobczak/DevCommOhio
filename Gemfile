@@ -21,6 +21,7 @@ gem 'bootstrap-form'
 gem 'simple_form'
 gem 'cancancan', '~> 2.0'
 gem 'pg'
+gem 'fog-aws'
 
 
 
