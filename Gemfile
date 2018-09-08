@@ -20,7 +20,7 @@ gem 'mini_magick'
 gem 'bootstrap-form'
 gem 'simple_form'
 gem 'cancancan', '~> 2.0'
-
+gem "aws-sdk-s3", require: false
 
 
 

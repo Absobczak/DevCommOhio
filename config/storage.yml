@@ -32,3 +32,10 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+
+amazon:
+  service: S3
+  access_key_id: <%= ENV['AKIAI7DF2PACBLCX4QJA'] %>
+  secret_access_key: <%= ENV['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'] %>
+  region: <%= ENV['US East (Ohio)'] %>
+  bucket: <%= ENV['devcommohio'] %>
